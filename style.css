@@ -1,0 +1,1014 @@
+/*
+Theme Name: Maressa Brown
+Author: Meredith Grubbs
+Version: 1.0
+*/
+
+/* @import '/node_modules/normalize.css/normalize.css'; */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* GENERAL STYLING */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:active, a:hover, a:focus {
+    outline: none;
+}
+
+h1 {
+    line-height: 1em;
+}
+
+
+
+
+
+
+.body-link {
+    font-weight: bold;
+    color: #3284B1;
+    transition: all 0.2s;
+}
+.body-link:hover {
+    color: #FF70A5;
+    border-bottom: #FF70A5 solid 4px;
+}
+
+
+
+
+
+
+/* BUTTONS */
+.button {
+    font-weight: bold;
+    color: #3284B1;
+    border: #3284B1 3px solid;
+    margin: 2em;
+    padding: .5em 2em;
+    border-radius: 4px;
+    transition: all 0.2s;
+    text-align: center;
+    line-height: 1.5em;
+}
+.button:hover {
+    color: #FF70A5;
+    border-color: #FF70A5;
+}
+
+
+
+
+
+
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+    width: 70%;
+}
+.logo {
+    width: 20em; 
+    margin-right: 3em;
+}
+.logo a {
+    width: 100%;
+}
+.logo a img {
+    max-width: 100%;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+}
+nav li {
+    margin-right: 2em;
+}
+nav a:last-of-type {
+    margin-right: 0;
+}
+nav a {
+    transition: all 0.2s;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
+}
+nav a span {
+    padding: .3em 0;
+}
+nav a:hover span {
+    border-top: #FF70A5 solid 4px;
+    color: #FF70A5;
+}
+
+.active {
+    font-weight: bold;
+}
+.active span {
+    color: #3284B1;
+}
+
+
+
+
+/* HAMBURGER MENU */
+.hamburger-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: transparent;
+    border-radius: 4px;
+    width: 30vw;
+}
+.hamburger-icon {
+    width: 2em;
+    display: none;
+}
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.mobile-nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: none;
+    width: 100%;
+}
+.mobile-nav li {
+    border-bottom: 1px solid #FFC2DA;
+    width: 100%;
+    padding: 1em;
+    transition: all 0.2s;
+}
+.mobile-nav a:hover span {
+    border-top: none;
+}
+.mobile-nav li:hover {
+    border-bottom: #FF70A5 solid 4px;
+}
+.mobile-nav li:hover span {
+    color: #FF70A5;
+    font-weight: bold;
+}
+.mobile-nav .active {
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+footer nav {
+    margin-bottom: 2em;
+}
+footer nav a:hover span {
+    border-top: none;
+    border-bottom: #FF70A5 solid 4px;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    width: 100%;
+}
+.social-media a {
+    transition: all 0.2s;
+    padding: .5em;
+}
+.social-media a:hover {
+    transform: scale(1.2);
+}
+.social-media img {
+    width: 2.5em;
+}
+.insta-background {
+    width: 100vw;
+    background-color: #FFEBF3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.insta-background .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.insta-link {
+    padding-top: 2em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    border-bottom: 2px solid black;
+    transition: all 0.2s;
+}
+.insta-link:hover {
+    color: #FF70A5;
+    border-bottom: 2px solid #FF70A5;
+}
+#instafeed {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .75fr;
+}
+#instafeed div {
+    margin: .5em;
+}
+#instafeed div, #instafeed div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#instafeed img, #instafeed video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+
+/* CONTAINER */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5em;
+}
+.section-title {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+    text-align: center;
+}
+.container, footer {
+    width: 70vw;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+/* HERO */
+.hero {
+    background-size: cover;
+    background-position: 50% 65%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6em;
+}
+.hero-content-container {
+    display: flex;
+    padding: 2em;
+    width: 70%;
+}
+.hero-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: .33;
+    margin-right: 1em;
+}
+.hero-content {
+    flex: 1;
+    background-color: rgba(255, 255, 255, .85);
+    padding: 1.5em;
+}
+.hero-content h1 {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+}
+.hero-home {
+    margin-bottom: 4em;
+}
+
+
+
+
+
+
+/* PORTFOLIO TILES */
+.portfolio-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.portfolio-tiles a {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+}
+.portfolio-tile {
+    padding: 4em;
+    margin: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.1s;
+}
+.portfolio-tile:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.portfolio-tile:hover {
+    border: #3284B1 solid .5em;
+    padding: 3.5em;
+}
+.portfolio .button {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+/* SERVICES */
+.services {
+    background-color: transparent;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .1);
+    padding: 2em 4em;
+    border-radius: 4px;
+    margin-bottom: 6em;
+    margin-top: 3em;
+}
+.service-items {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2em;
+}
+.service-item {
+    flex-basis: 33%;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.service-item:last-of-type {
+    margin-right: 0;
+}
+.service-item img {
+    width: 3em;
+    margin-bottom: 0em;
+}
+.service-item h2 {
+    font-size: 1em;
+    margin-bottom: .5em;
+}
+.service-item p {
+    margin-top: 0;
+}
+.services .button {
+    margin-top: 1em;
+}
+
+
+
+
+
+
+/* CLIENTS */
+.pink-borders {
+    width: 100vw;  
+    background-color: #FFEBF3;
+    margin-bottom: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clients {
+    background-color: white;
+    border-radius: 3em;
+    border: white 4px solid;
+    padding: 1em;
+    margin: 0;
+}
+.clients .section-title {
+    margin-top: 0;
+    padding-bottom: 1em;
+}
+.client-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    width: 100%;
+}
+.client-logos img {
+    height: 1.5em;
+    padding: 1.5em;
+    max-width: 100%;
+}
+
+
+
+
+
+
+/* TESTIMONIALS */
+.testimonial-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 4em;
+}
+.testimonial {
+    margin-bottom: 2em;
+}
+.quote {
+    line-height: 2em;
+}
+.quotation-mark {
+    color: #3284B1;
+    font-size: 1.5em;
+}
+.author {
+    font-size: 1em;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, .6);
+}
+.author:before {
+    content: "- ";
+}
+.title {
+    font-weight: 500;
+    font-size: .8em;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+/* ABOUT PAGE */
+.about-page {
+    margin-bottom: 2em;
+}
+.buttons {
+    margin-bottom: 4em;
+    display: flex;
+}
+.primary-btn {
+    margin: .5em;
+    background-color: #3284B1;
+    color: white;
+}
+.primary-btn:hover {
+    background-color: #FF70A5;
+    border-color: #FF70A5;
+    color: white;
+}
+.secondary-btn {
+    margin: .5em;
+}
+.about-page p {
+    line-height: 2em;
+}
+
+
+
+
+
+
+/* PORTFOLIO PAGES */
+.portfolio-nav-bar {
+    background-color: #FFEBF3;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.portfolio-title {
+    font-size: 1em;
+    width: 100%;
+    padding: .5em 0;
+}
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 3em;
+}
+.portfolio-title a {
+    text-decoration: underline;
+}
+.portfolio-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 4em;
+}
+.portfolio-logo {
+    margin-right: 4em;
+}
+.portfolio-logo img{
+   width: 10em;
+}
+#weight-watchers {
+    width: 5em;
+    padding-right: 5em;
+}
+.portfolio-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.portfolio-links a {
+    text-decoration: underline;
+    transition: all 0.2s;
+    margin-bottom: 1.5em;
+}
+.portfolio-links a:hover {
+    color: #FF70A5;
+}
+
+
+
+
+
+
+/* TESTIMONIAL PAGE */
+.testimonials-page {
+    background-color: white;
+    padding: 0 2em;
+    margin-bottom: 0;
+}
+
+
+
+
+/* CONTACT PAGE */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contact-page p {
+    margin-bottom: 0;
+}
+.wpcf7 {
+    width: 100%;
+}
+.contact-page form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 4em;
+    width: 100%;
+}
+.contact-page form label {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+.contact-page form input, .contact-page form textarea {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    width: 75%;
+}
+.contact-page form input:focus, .contact-page form textarea:focus {
+    border: #FF70A5 2px solid;
+    outline: none;
+}
+.contact-page form input[type="text"], .contact-page form input[type="email"] {
+    padding: .5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.contact-page form textarea {
+    resize: none;
+    padding: .5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.contact-page form input[type="submit"] {
+    font-weight: bold;
+    color: #3284B1;
+    background-color: transparent;
+    border: #3284B1 3px solid;
+    padding: .5em 4em;
+    border-radius: 4px;
+    transition: all 0.2s;  
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-page form input[type="submit"]:hover {
+    color: #FF70A5;
+    border-color: #FF70A5;
+}
+
+
+
+
+
+
+/* ADDITIONAL STYLING */
+.mb-4 {
+    margin-bottom: 4em;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1500px) {
+    header, .container, .hero-content-container, .clients, footer {
+        width: 1050px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .hero {
+        background-image: url('/images/maressa_brown_sparkle_3000_medium.jpg');
+        background-image:
+            -webkit-image-set(
+                url('/images/maressa_brown_sparkle_3000_medium.jpg') 1x,
+                url('/images/maressa_brown_sparkle_5800_large.jpeg') 2x,
+            );
+        background-image:
+        image-set(
+            url('/images/maressa_brown_sparkle_3000_medium.jpg') 1x,
+            url('/images/maressa_brown_sparkle_5800_large.jpeg') 2x,
+        );
+    }
+}
+@media screen and (min-width: 1350px) {
+    .hero-home {
+        height: 18em;
+    }
+    .hero-home .hero-content-container {
+        height: 80%;
+    }
+    .hero-home .hero-img {
+        flex: .3;
+    }
+    .hero-home .hero-content {
+        flex: 1;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .about-page .hero-content-container {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .about-page .hero-img {
+        flex: 1;
+        background-size: contain;
+        height: 30em;
+    }
+    .about-page .hero-content {
+        flex: 1;  
+    }
+}
+@media screen and (max-width: 1180px) {
+    .about-page .hero-img {
+        height: 25em;
+    }
+}
+@media screen and (max-width: 1143px) {
+    .hero-img {
+        flex: .5;
+    }
+    .hero-content {
+        flex: 1;
+    }
+    
+
+    .services .section-title {
+        margin-bottom: 0;
+    }
+    .service-items {
+        flex-direction: column;
+    }
+    .service-item {
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .about-page .hero-img {
+        height: 23em;
+    }
+}
+@media screen and (max-width: 950px) {
+    header, .container, .hero-content-container, footer {
+        width: 80%;
+    }
+    .client-logos {
+        padding: 0 .25em;
+    }
+    .testimonial-group {
+        padding: 0;
+    }
+}
+@media screen and (max-width: 813px) {
+    .about-page .hero-img {
+        height: 22em;
+    }
+}
+@media screen and (max-width: 800px) {
+    header {
+        justify-content: center;
+    }
+    .logo {
+        margin: 0;
+    }
+    .desktop-nav {
+        display: none;
+    }
+    .hamburger-icon {
+        display: block;
+    }
+    
+    .portfolio-tiles {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .portfolio-tile:hover {
+        padding: 2.5em;
+    }
+    .portfolio-group {
+        flex-direction: column;
+    }
+    .portfolio-logo {
+        margin-right: 0;
+        margin-bottom: 1.5em;
+    }
+    .hero-home .hero-img {
+        flex: 1;
+    }
+    .hero-home .hero-content {
+        flex: 1;
+    }
+    .contact-page form, .contact-page input, .contact-page textarea {
+        width: 100%;
+    }
+    .contact-page form input[type="text"], .contact-page form input[type="email"] {
+        padding: 1em .5em;
+    }
+    .contact-page form textarea {
+        padding: 1em .5em;
+    }
+    .contact-page form input[type="submit"] {
+        
+        padding: 1em 2em;
+    }
+}
+@media screen and (max-width: 790px) {
+    .about-page .hero-img {
+        height: 20em;
+    }
+}
+@media screen and (max-width: 725px) {
+    .about-page .hero-img {
+        height: 18em;
+    }
+}
+@media screen and (max-width: 650px) { 
+    .hero {
+        align-items: center;
+        height: 60em;
+        background-image: url('/images/maressa_brown_sparkle_800_mobile.jpg');
+        background-image:
+            -webkit-image-set(
+                url('/images/maressa_brown_sparkle_800_mobile.jpg') 1x,
+                url('/images/maressa_brown_sparkle_1600.jpg') 2x,
+            );
+        background-image:
+        image-set(
+            url('/images/maressa_brown_sparkle_800_mobile.jpg') 1x,
+            url('/images/maressa_brown_sparkle_1600.jpg') 2x,
+        );
+    }
+    .hero-home {
+        height: 55em;
+    }
+    .hero-img {
+        background-image: url('./images/maressa_brown_photo_1000.png');
+    }
+    .hero-content-container {
+        height: 95%;
+        flex-direction: column;
+    }
+    .about-page {
+        height: 70em;
+    }
+    .about-page .hero-img {
+        background-size: cover;
+        width: 100%;
+        flex: 1;
+    }
+    .about-page .hero-content {
+        flex: .5;
+    }
+    .hero-home .hero-img {
+        flex: 1;
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+    .hero-home .hero-content {
+        flex: .5;  
+    }
+    footer nav {
+        width: 100%;
+    }
+    footer nav div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    footer nav li {
+        margin: 1em 0;
+        padding-bottom: 1em;
+        border-bottom: rgba(255, 136, 185, .1) solid 2px;
+        width: 100%;
+        transition: all 0.2s;
+    }
+    footer nav li:hover {
+        border-bottom: #FF70A5 4px solid;
+    }
+    footer nav li:hover span {
+        color: #FF70A5;
+        border-bottom: none;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 500px) {
+    .button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .hero {
+        height: 80em;
+    }
+    .logo {
+        margin-top: 2em;
+    }
+    .hamburger-menu {
+        width: 50vw;
+    }
+    .hero-home {
+        height: 50em;
+    }
+    .hero-img {
+        background-image: url('./images/maressa_brown_photo_500.png');
+    }
+    .portfolio-tiles {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .portfolio-tile {
+        padding: 3em;
+    }
+    .services {
+        padding: 1em 2em;
+    }
+    .clients .section-title {
+        padding: 0;
+    }
+    .client-logos img {
+        padding: 1em;
+    }
+    .on-camera {
+        background-position: 0% 35%;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    #instafeed {
+        grid-template-rows: .75fr .75fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 350px) {
+    .hero {
+        height: 90em;
+        background-image: url('/images/maressa_brown_sparkle_350_small_mobile.jpg');
+        background-image:
+            -webkit-image-set(
+                url('/images/maressa_brown_sparkle_350_small_mobile.jpg') 1x,
+                url('/images/maressa_brown_sparkle_800_mobile.jpg') 2x,
+            );
+        background-image:
+        image-set(
+            url('/images/maressa_brown_sparkle_350_small_mobile.jpg') 1x,
+            url('/images/maressa_brown_sparkle_800_mobile.jpg') 2x,
+        );
+    }
+    .hero-home {
+        height: 55em;
+    }
+}
+@media screen and (max-width: 300px) {
+    header, .container, .hero-content-container, footer {
+        width: 90%;
+    }
+    .hero-content-container {
+        padding: .5em;
+    }
+    .hero {
+        height: 100em;
+    }
+    .hero-home {
+        height: 60em;
+    }
+    .social-media {
+        flex-wrap: wrap;
+    }
+}
+
